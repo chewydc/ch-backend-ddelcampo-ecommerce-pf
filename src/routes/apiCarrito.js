@@ -1,6 +1,7 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import Router from 'express'
 import {
@@ -16,7 +17,7 @@ apiCarrito.get('/:id', async (req, res) => {
     })
 })
 
-apiCarrito.get('/:id/productos',  async (req, res) => {
+apiCarrito.get('/:id/productos', async (req, res) => {
     getProdCarrito(req.params.id, function (err, result) {
         if (err) res.status(err.estado).json(err.descripcion)
         else res.json(result)
@@ -24,7 +25,7 @@ apiCarrito.get('/:id/productos',  async (req, res) => {
 })
 
 // Crea un nuevo carrito y retorna el ID
-apiCarrito.post('/',  async (req, res) => {
+apiCarrito.post('/', async (req, res) => {
     setCarrito(req.body.email, req.body.direccion, function (err, result) {
         if (err) res.status(err.estado).json(err.descripcion)
         else res.json(result)
@@ -32,15 +33,15 @@ apiCarrito.post('/',  async (req, res) => {
 })
 
 // Agrega productos al carrito según su ID
-apiCarrito.post('/:id/productos/:id_prod',  async (req, res) => {
-        setProdCarrito(req.params.id, req.params.id_prod, function (err, result) {
+apiCarrito.post('/:id/productos/:id_prod', async (req, res) => {
+    setProdCarrito(req.params.id, req.params.id_prod, function (err, result) {
         if (err) res.status(err.estado).json(err.descripcion)
         else res.json(result)
     })
 })
 
 //Elimina Carrito por su ID
-apiCarrito.delete('/:id',  async (req, res) => {
+apiCarrito.delete('/:id', async (req, res) => {
     deleteCarrito(req.params.id, function (err, result) {
         if (err) res.status(err.estado).json(err.descripcion)
         else res.json(`Carrito ID: ${req.params.id} eliminado OK!`)

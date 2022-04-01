@@ -18,11 +18,11 @@ if (localStorage.getItem('token')) {
             window.location.replace(`/login`)
         }
     })
-    .catch(err => {
-        console.log(err)
-        localStorage.clear()
-        window.location.replace('/login/error')
-    });
+        .catch(err => {
+            console.log(err)
+            localStorage.clear()
+            window.location.replace('/login/error')
+        });
 }
 
 
@@ -56,7 +56,7 @@ botnLogin.addEventListener('click', () => {
                 localStorage.setItem('direccion', user.user.direccion);
                 localStorage.setItem('telefono', user.user.telefono);
                 localStorage.setItem('id', user.user.id);
-                data = {email: user.user.email,direccion: user.user.direccion}
+                data = { email: user.user.email, direccion: user.user.direccion }
                 fetch(`/api/carrito?secret_token=${localStorage.getItem('token')}`, {
                     method: 'POST',
                     headers: {
@@ -68,17 +68,17 @@ botnLogin.addEventListener('click', () => {
                     localStorage.setItem('idCarrito', idCarrito);
                     window.location.replace(`/?secret_token=${localStorage.getItem('token')}`)
                 })
-                .catch(errCarrito => {
-                    console.log(errCarrito)
+                    .catch(errCarrito => {
+                        console.log(errCarrito)
+                        window.location.replace('/login/error')
+                    })
+            })
+                .catch(errUser => {
+                    console.log(errUser)
                     window.location.replace('/login/error')
                 })
-            })
-            .catch(errUser => {
-                console.log(errUser)
-                window.location.replace('/login/error')
-            })
         }
-        else{
+        else {
             window.location.replace('/login/error')
         }
     })

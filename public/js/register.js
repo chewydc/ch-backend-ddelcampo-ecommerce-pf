@@ -13,7 +13,7 @@ botnRegister.addEventListener('click', () => {
     const telefono = document.getElementById('telefono').value
     const direccion = document.getElementById('direccion').value
     const avatar = document.getElementById('avatar').value
-    const data = { nombre, email , password , passwordConfirm, telefono,direccion, avatar };
+    const data = { nombre, email, password, passwordConfirm, telefono, direccion, avatar };
     document.getElementById('nombre').value = "";
     document.getElementById('email').value = "";
     document.getElementById('password').value = "";
@@ -31,8 +31,8 @@ botnRegister.addEventListener('click', () => {
         if (response.status == 200) {
             localStorage.clear();
             window.location.replace(`/login`)
-            }
-        else{
+        }
+        else {
             window.location.replace('/register/error')
         }
     })

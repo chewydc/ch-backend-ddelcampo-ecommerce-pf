@@ -1,6 +1,7 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import mongoose from 'mongoose'
 import { default as config } from '../config.js'

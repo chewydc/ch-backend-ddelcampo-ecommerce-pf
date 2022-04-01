@@ -4,9 +4,9 @@
 // Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import Router from 'express'
-import {updateUsuario} from '../controllers/usuarioController.js'
+import { updateUsuario } from '../controllers/usuarioController.js'
 
-const apiInfoUsuario= new Router()
+const apiInfoUsuario = new Router()
 
 
 apiInfoUsuario.get(
@@ -19,11 +19,11 @@ apiInfoUsuario.get(
   }
 );
 
-apiInfoUsuario.put('/profile/:id', async (req,res)=> {
-  updateUsuario(req.params.id,req.body.nombre,req.body.telefono,req.body.email,req.body.direccion,req.body.admin,req.body.avatar,function (err,result){
-      if (err) res.status(err.estado).json(err.descripcion)
-      else res.json(result)    
-      })
+apiInfoUsuario.put('/profile/:id', async (req, res) => {
+  updateUsuario(req.params.id, req.body.nombre, req.body.telefono, req.body.email, req.body.direccion, req.body.admin, req.body.avatar, function (err, result) {
+    if (err) res.status(err.estado).json(err.descripcion)
+    else res.json(result)
+  })
 })
 
-export {apiInfoUsuario};
+export { apiInfoUsuario };

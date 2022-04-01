@@ -22,4 +22,4 @@ routerChat.get('*', (req, res) => {
     res.status(404).send(`Ruta ${method} ${url} no está implementada`)
 })
 
-export {routerChat}
+export { routerChat }

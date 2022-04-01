@@ -1,6 +1,7 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import {ProductosDao as a} from '../daos/index.js'
 import {CarritoDao as b} from '../daos/index.js'

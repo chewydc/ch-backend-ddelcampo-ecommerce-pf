@@ -1,22 +1,23 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import Router from 'express'
 import passport from 'passport'
-import {createToken} from '../controllers/usuarioController.js'
+import { createToken } from '../controllers/usuarioController.js'
 
 const apiUsuario = new Router()
 
 apiUsuario.post(
-  '/register', 
+  '/register',
   passport.authenticate('register', { session: false }),
-    async (req,res,next) => {
-        res.json({
-        message: 'El usuario se registro con exito',
-        userID: req.user
-        })
-      }
+  async (req, res, next) => {
+    res.json({
+      message: 'El usuario se registro con exito',
+      userID: req.user
+    })
+  }
 )
 
 
@@ -34,7 +35,7 @@ apiUsuario.post(
             { session: false },
             async (error) => {
               if (error) return next(error)
-              const body = { id: user.id, nombre: user.nombre,email: user.email, admin: user.admin, direccion: user.direccion,telefono: user.telefono,avatar: user.avatar };
+              const body = { id: user.id, nombre: user.nombre, email: user.email, admin: user.admin, direccion: user.direccion, telefono: user.telefono, avatar: user.avatar };
               const token = createToken(body)
               return res.json({ token });
             }
@@ -48,7 +49,7 @@ apiUsuario.post(
 );
 
 // Manejo de errores.
-apiUsuario.use(function(err, req, res, next) {
+apiUsuario.use(function (err, req, res, next) {
   res.status(err.estado || 500);
   res.json({ error: err });
 });
@@ -60,4 +61,4 @@ apiUsuario.get('*', (req, res) => {
   res.status(404).send(`Ruta ${method} ${url} no está implementada`)
 })
 
-export {apiUsuario}
+export { apiUsuario }

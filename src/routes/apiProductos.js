@@ -1,10 +1,11 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import Router from 'express'
 import {
-    getProducto,getProductos,setProducto,updateProducto,deleteProducto
+    getProducto, getProductos, setProducto, updateProducto, deleteProducto
 } from '../controllers/productoController.js'
 
 const apiProductos = new Router()
@@ -16,41 +17,41 @@ apiProductos.get('/', async (req, res) => {
     })
 })
 
-apiProductos.get('/:id', async (req,res)=> {
-        getProducto(req.params.id,function (err,result){
-            if (err) res.status(err.estado).json(err.descripcion)
-            else res.json(result)    
-        })
-    }
+apiProductos.get('/:id', async (req, res) => {
+    getProducto(req.params.id, function (err, result) {
+        if (err) res.status(err.estado).json(err.descripcion)
+        else res.json(result)
+    })
+}
 )
 
-apiProductos.post('/', async (req,res)=> {
+apiProductos.post('/', async (req, res) => {
     if (!req.user.admin) res.status(401).json("Acceso no autorizado. El usuario debe ser admin para acceder")
     else {
-        setProducto(req.body.nombre,req.body.precio,req.body.descripcion,req.body.categoria,req.body.stock,req.body.foto,function (err,result){
+        setProducto(req.body.nombre, req.body.precio, req.body.descripcion, req.body.categoria, req.body.stock, req.body.foto, function (err, result) {
             if (err) res.status(err.estado).json(err.descripcion)
-            else res.status(200).json(result)    
-            })
+            else res.status(200).json(result)
+        })
     }
 })
 
-apiProductos.put('/:id', async (req,res)=> {
+apiProductos.put('/:id', async (req, res) => {
     if (!req.user.admin) res.status(401).json("Acceso no autorizado. El usuario debe ser admin para acceder")
     else {
-        updateProducto(req.params.id,req.body.nombre,req.body.precio,req.body.descripcion,req.body.categoria,req.body.stock,req.body.foto,function (err,result){
+        updateProducto(req.params.id, req.body.nombre, req.body.precio, req.body.descripcion, req.body.categoria, req.body.stock, req.body.foto, function (err, result) {
             if (err) res.status(err.estado).json(err.descripcion)
-            else res.json(result)    
-            })
-        }
+            else res.json(result)
+        })
+    }
 })
 
-apiProductos.delete('/:id', async (req,res)=> {
+apiProductos.delete('/:id', async (req, res) => {
     if (!req.user.admin) res.status(401).json("Acceso no autorizado. El usuario debe ser admin para acceder")
     else {
-        await deleteProducto(req.params.id,function (err,result){
+        await deleteProducto(req.params.id, function (err, result) {
             if (err) res.status(err.estado).json(err.descripcion)
-            else res.json(result)    
-            })
+            else res.json(result)
+        })
     }
 })
 
@@ -58,6 +59,6 @@ apiProductos.delete('/:id', async (req,res)=> {
 apiProductos.get('*', (req, res) => {
     const { url, method } = req
     res.status(404).send(`Ruta ${method} ${url} no está implementada`)
-  })
+})
 
-export {apiProductos}
+export { apiProductos }

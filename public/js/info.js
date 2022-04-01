@@ -4,7 +4,7 @@
 // Alumno: Damian del Campo
 //-------------------------------------------------------------------
 let token = localStorage.getItem('token')
-getInfoPage() 
+getInfoPage()
 
 const btnLogout = document.getElementById('btnLogout')
 btnLogout.addEventListener('click', () => {
@@ -18,7 +18,7 @@ btnHome.addEventListener('click', () => {
 async function getInfoPage() {
     let info = await getInfo()
     const plantillaInfo = await buscarPlantillaInfo()
-    const htmlinfo = armarHTMLinfo(plantillaInfo,info)
+    const htmlinfo = armarHTMLinfo(plantillaInfo, info)
     document.getElementById('info').innerHTML = htmlinfo
 }
 function buscarPlantillaInfo() {
@@ -29,8 +29,8 @@ function getInfo() {
     return fetch(`/api/info/?secret_token=${token}`)
         .then(msjs => msjs.json())
 }
-function armarHTMLinfo(plantillaInfo,info) {
-    const render = Handlebars.compile(plantillaInfo,info);
+function armarHTMLinfo(plantillaInfo, info) {
+    const render = Handlebars.compile(plantillaInfo, info);
     const html = render({ info })
-   return html
+    return html
 }
