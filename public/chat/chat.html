@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+        integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.6/ejs.min.js"></script>
+</head>
+
+<style>
+    a.nav-link {
+        color: gray;
+        font-size: 18px;
+        padding: 0;
+    }
+
+    .avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #e84118;
+        padding: 2px;
+        flex: none;
+    }
+
+    input:focus {
+        outline: 0px !important;
+        box-shadow: none !important;
+    }
+
+    .card-text {
+        border: 2px solid #ddd;
+        border-radius: 8px;
+    }
+</style>
+
+<body>
+    <div class="container mt-4">
+        <div class="card mx-auto" style="max-width:400px">
+            <div class="card-header bg-transparent">
+                <div class="navbar navbar-expand p-0">
+                    <ul class="navbar-nav me-auto align-items-center">
+                        <div id="email"></div>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body p-4" style="height: 500px; overflow: auto;">
+                <div id="mensajes"></div>
+            </div>
+            <div class="card-footer bg-white position-relative w-100 bottom-0 m-0 p-1">                
+                <div class="input-group-text bg-transparent border-1">
+                    <input type="text" id="mensaje" class="form-control border-0" autocomplete="off" placeholder="Escribe un mensaje...">
+                    <button type="submit" id="btnEnviar" class="btn btn-primary my-0"  >Enviar!</button>
+                </div>                
+                <button type="submit" id="btnHome" class="btn btn-success my-2">Home</button>
+                <button type="submit" id="btnLogout" class="btn btn-danger my-2">Logout</button>
+            </div>
+        </div>
+    </div>
+    <script src="/js/chat.js"></script>
+</body>
+
+</html>

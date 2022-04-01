@@ -1,0 +1,9 @@
+{{#if user}}
+    <img  style="width:50%" src="{{user.avatar}}" class="rounded mx-auto d-block" onerror="this.src='http://localhost:8080/img/avatarDefault.png'">
+    <h3>{{user.nombre}}</h3>
+    <h5>Telefono: {{user.telefono}}</h5>
+    <h5>Email: <a class="font-italic">{{user.email}}</a></h5>
+    <h5>Direccion: {{user.direccion}}</h5>
+    <h5>Administrador: {{user.admin}}</h5>
+    <button type="button" class="btn btn-primary mt-3 mb-5" onclick="cargaActualizaUser()">Actualizar Datos</button>
+{{/if}}

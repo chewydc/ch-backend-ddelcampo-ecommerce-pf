@@ -1,0 +1,47 @@
+{{#if user}}
+<h1>Editar Perfil</h1>
+<br>
+<form>
+    <div class="form-group">
+        <label for="nombre"><b>Nombre</b></label>
+        <input id="nombre" value="{{user.nombre}}" class="form-control" type="text" name="nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="telefono"><b>Telefono</b></label>
+        <input id="telefono" value="{{user.telefono}}" class="form-control" type="text" name="telefono">
+    </div>
+
+    <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input id="email" value="{{user.email}}" class="form-control" type="text" name="email">
+    </div>
+
+    <div class="form-group">
+        <label for="direccion"><b>Direccion</b></label>
+        <input id="direccion" value="{{user.direccion}}" class="form-control" type="text" name="direccion">
+    </div>
+
+    <div class="form-group">
+        <label for="admin"><b>Administrador</b></label>
+        <input id="admin" value="{{user.admin}}" class="form-control" type="text" name="admin">
+    </div>
+
+    <div class="form-group">
+        <label for="avatar"><b>Avatar URL</b></label>
+        <input id="avatar" value="{{user.avatar}}" class="form-control" type="text" name="avatar">
+    </div>
+    <p>
+        <button type="button" class="btn btn-secondary mt-3 mb-5" data-bs-toggle="collapse" data-bs-target="#collapse"
+            aria-expanded="false" aria-controls="collapse">
+            Confirmar cambios
+        </button>
+    </p>
+
+    <div class="collapse" id="collapse">
+        <div class="card card-body" style="width: 18rem;">Deberá reiniciar la sesion para que los cambios surtan efecto
+            <div type="button" class="btn btn-success mt-1 mb-3" onclick="actualizaPerfilUsuario({{user.id}})">OK</div>
+        </div>
+    </div>
+</form>
+{{/if}}

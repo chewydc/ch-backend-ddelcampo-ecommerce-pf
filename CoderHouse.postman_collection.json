@@ -1,0 +1,2327 @@
+{
+	"info": {
+		"_postman_id": "e1fd2801-ec6e-43ea-9a25-a7702faa7158",
+		"name": "CoderHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ordenes",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/ordenes/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ordenes/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ordenes",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API get Ordenes por ID"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/ordenes?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ordenes/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ordenes",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-SLApMlTHlb5dopBg3CicK+FoawM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:17:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"62446bde3aa6c48829d1c7b5\",\n        \"items\": [\n            {\n                \"nombre\": \"Mochila\",\n                \"precio\": 1235,\n                \"descripcion\": \"mochi\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png\",\n                \"cantidad\": 1,\n                \"timestamp\": \"29/3/2022 19:31:55\",\n                \"id\": 1\n            },\n            {\n                \"nombre\": \"Calculadora\",\n                \"precio\": 123,\n                \"descripcion\": \"Calculadora Cientifica\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png\",\n                \"cantidad\": 1,\n                \"timestamp\": \"30/3/2022 08:59:53\",\n                \"id\": 2\n            }\n        ],\n        \"email\": \"example@example\",\n        \"direccion\": \"Av. Siempre Viva 1900\",\n        \"estado\": \"generada\",\n        \"timestamp\": \"30/3/2022 11:40:30\",\n        \"id\": 1,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/ordenes/<EMAIL>?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/ordenes/<EMAIL>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ordenes",
+								"example@example"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/ordenes?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/ordenes/<EMAIL>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ordenes",
+										"example@example"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-SLApMlTHlb5dopBg3CicK+FoawM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:17:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"62446bde3aa6c48829d1c7b5\",\n        \"items\": [\n            {\n                \"nombre\": \"Mochila\",\n                \"precio\": 1235,\n                \"descripcion\": \"mochi\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png\",\n                \"cantidad\": 1,\n                \"timestamp\": \"29/3/2022 19:31:55\",\n                \"id\": 1\n            },\n            {\n                \"nombre\": \"Calculadora\",\n                \"precio\": 123,\n                \"descripcion\": \"Calculadora Cientifica\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png\",\n                \"cantidad\": 1,\n                \"timestamp\": \"30/3/2022 08:59:53\",\n                \"id\": 2\n            }\n        ],\n        \"email\": \"example@example\",\n        \"direccion\": \"Av. Siempre Viva 1900\",\n        \"estado\": \"generada\",\n        \"timestamp\": \"30/3/2022 11:40:30\",\n        \"id\": 1,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/ordenes/<IDCARRITO>?secret_token=<TOKEN>",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/ordenes/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"ordenes",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API crea Orden por ID de Carrito"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/ordenes?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/ordenes/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"ordenes",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-SWSrHHuoHJIiog2ydhtwGWjZk+g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:18:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Orden 13 creada con exito.\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API devuelve todos los productos"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "858"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35a-opH9+kysYROvTv2ez1tneGhzS2M\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:14:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"624388d2fcd77b6221503fac\",\n        \"nombre\": \"Mochila\",\n        \"precio\": 1235,\n        \"descripcion\": \"mochi\",\n        \"categoria\": \"mochi\",\n        \"stock\": 1224,\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png\",\n        \"timestamp\": \"29/3/2022 19:31:55\",\n        \"id\": 1,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"624446394c4152bd8dbcea43\",\n        \"nombre\": \"Calculadora\",\n        \"precio\": 123,\n        \"descripcion\": \"Calculadora Cientifica\",\n        \"categoria\": \"Calculadoras\",\n        \"stock\": 1119,\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png\",\n        \"timestamp\": \"30/3/2022 08:59:53\",\n        \"id\": 2,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6244a27927996b93d2f0b015\",\n        \"nombre\": \"Paleta\",\n        \"precio\": 12900,\n        \"descripcion\": \"Paleta de colores\",\n        \"categoria\": \"Paleta\",\n        \"stock\": 1,\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/paint-color-pallete-brush-academy-128.png\",\n        \"timestamp\": \"30/3/2022 15:33:39\",\n        \"id\": 3,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API devuelve producto por ID de producto"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-JwaqosngVouBu1TL5UtieGC8A2I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:14:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"624388d2fcd77b6221503fac\",\n        \"nombre\": \"Mochila\",\n        \"precio\": 1235,\n        \"descripcion\": \"mochi\",\n        \"categoria\": \"mochi\",\n        \"stock\": 1224,\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png\",\n        \"timestamp\": \"29/3/2022 19:31:55\",\n        \"id\": 1,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\": \"Pizarra\",\r\n\"precio\": 2500,\r\n\"descripcion\": \"Pizarra 4x4\",\r\n\"categoria\": \"Pizarras\",\r\n\"stock\": 185,\r\n\"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API add producto"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"nombre\": \"Pizarra\",\r\n\"precio\": 2500,\r\n\"descripcion\": \"Pizarra 4x4\",\r\n\"categoria\": \"Pizarras\",\r\n\"stock\": 185,\r\n\"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-+VIjQ1la3W5mlI1i6VrEVgH9AOA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:14:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Nuevo producto ID: 4 cargado OK!\""
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nombre\": \"Pizarra\",\r\n\"precio\": 2500,\r\n\"descripcion\": \"Pizarra 4x4\",\r\n\"categoria\": \"Pizarras\",\r\n\"stock\": 180,\r\n\"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"4"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API Update producto por id"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"nombre\": \"Pizarra\",\r\n\"precio\": 2500,\r\n\"descripcion\": \"Pizarra 4x4\",\r\n\"categoria\": \"Pizarras\",\r\n\"stock\": 180,\r\n\"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"4"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-joWmIpnujdj9/KZ+w1a+hqcuIKU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:16:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"62460bb9259cdd30082db723\",\n    \"nombre\": \"Pizarra\",\n    \"precio\": 2500,\n    \"descripcion\": \"Pizarra 4x4\",\n    \"categoria\": \"Pizarras\",\n    \"stock\": 180,\n    \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\",\n    \"timestamp\": \"31/3/2022 17:16:11\",\n    \"id\": 4,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"productos",
+								"4"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/productos/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"productos",
+										"4"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-4yj+4ok/TuM4wXhEAWgicTS2dFg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:16:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Producto ID: 4 eliminado OK!\""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Carrito",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API get Carrito por ID"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-UYReSTAKtmYfI5TaUsdoWkSzwxo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:11:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"622a0f3623a1cb2582d19d94\",\n    \"productos\": [\n        {\n            \"nombre\": \"Calculadora 2\",\n            \"precio\": 2500,\n            \"descripcion\": \"Calculadora Cientifica 2\",\n            \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n            \"cantidad\": 2,\n            \"timestamp\": \"10/3/2022 11:46:00\",\n            \"id\": 2\n        },\n        {\n            \"nombre\": \"Calculadora\",\n            \"precio\": 2500,\n            \"descripcion\": \"Calculadora Cientifica\",\n            \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n            \"cantidad\": 3,\n            \"timestamp\": \"10/3/2022 11:45:47\",\n            \"id\": 1\n        }\n    ],\n    \"email\": \"damian@gmail\",\n    \"direccion\": \"scalabrini 129\",\n    \"timestamp\": \"10/3/2022 11:46:13\",\n    \"id\": 1,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/carrito/<ID>/productos?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/<ID>/productos?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1",
+								"productos"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API devuelve solo los productos del ID carrito "
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito/<ID>/productos?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/carrito/<ID>/productos?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "469"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d5-EUUewAUEH4EPqrDEfHuDEC82j3A\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:12:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"nombre\": \"Calculadora 2\",\n        \"precio\": 2500,\n        \"descripcion\": \"Calculadora Cientifica 2\",\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n        \"cantidad\": 2,\n        \"timestamp\": \"10/3/2022 11:46:00\",\n        \"id\": 2\n    },\n    {\n        \"nombre\": \"Calculadora\",\n        \"precio\": 2500,\n        \"descripcion\": \"Calculadora Cientifica\",\n        \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n        \"cantidad\": 3,\n        \"timestamp\": \"10/3/2022 11:45:47\",\n        \"id\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/carrito?secret_token=<TOKEN>",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"direccion\": \"Av. Siempre Viva 123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API crea carrito. "
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"example@example.com\",\r\n    \"direccion\": \"Av. Siempre Viva 123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/carrito?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2-1UrQCdF5rjRmg8/DYDl5vJkznvc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:12:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "76"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"4"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API elimina carrito por su ID"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito",
+										"4"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-1QnD4tLWG+eh8uDloJL/I/V1HdU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:12:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Carrito ID: 4 eliminado OK!\""
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/carrito/<IDCarrito>/productos/<IDProductos>?secret_token=<TOKEN>",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1",
+								"productos",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API agrega productos por su ID al carrito ID"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "618"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26a-E4QcezlKKKiagGgsMPx1kxrbI8U\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:13:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"622a0f3623a1cb2582d19d94\",\n        \"productos\": [\n            {\n                \"nombre\": \"Calculadora 2\",\n                \"precio\": 2500,\n                \"descripcion\": \"Calculadora Cientifica 2\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n                \"cantidad\": 2,\n                \"timestamp\": \"10/3/2022 11:46:00\",\n                \"id\": 2\n            },\n            {\n                \"nombre\": \"Calculadora\",\n                \"precio\": 2500,\n                \"descripcion\": \"Calculadora Cientifica\",\n                \"foto\": \"https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png\",\n                \"cantidad\": 4,\n                \"timestamp\": \"10/3/2022 11:45:47\",\n                \"id\": 1\n            }\n        ],\n        \"email\": \"damian@gmail\",\n        \"direccion\": \"scalabrini 129\",\n        \"timestamp\": \"10/3/2022 11:46:13\",\n        \"id\": 1,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/carrito/<IDCarrito>/productos/<IDProductos>?secret_token=<TOKEN>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"carrito",
+								"1",
+								"productos",
+								"1"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API elimina id producto del id carrito ingresado por parametro"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"carrito",
+										"1",
+										"productos",
+										"1"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:13:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Content-Length",
+									"value": "0"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/usuario/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example1@example.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "passwordConfirm",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "nombre",
+									"value": "Nombre Apellido",
+									"type": "default"
+								},
+								{
+									"key": "telefono",
+									"value": "1123456789",
+									"type": "default"
+								},
+								{
+									"key": "direccion",
+									"value": "Av Siempre Viva",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuario/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"register"
+							]
+						},
+						"description": "API para la registracion de un nuevo usuario"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "example1@example.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "default"
+										},
+										{
+											"key": "passwordConfirm",
+											"value": "password",
+											"type": "default"
+										},
+										{
+											"key": "nombre",
+											"value": "Nombre Apellido",
+											"type": "default"
+										},
+										{
+											"key": "telefono",
+											"value": "1123456789",
+											"type": "default"
+										},
+										{
+											"key": "direccion",
+											"value": "Av Siempre Viva",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuario/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-H2MNHdWpLTnEVT1xPf/RqKKPLAU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 19:59:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"El usuario se registro con exito\",\n    \"userID\": {\n        \"userId\": 5\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/usuario/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example@example",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/usuario/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"usuario",
+								"login"
+							]
+						},
+						"description": "API para el logueo del usuario"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "example@example",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuario/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "460"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1cc-yEm62yMBI1id9hBWG/bJ2hSFvqg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:00:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"<TOKEN>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"profile"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						},
+						"description": "API example to access secured routed"
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"profile"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "700"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2bc-mIigUQcWaopQvM9SjWLUAuqpFjA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:00:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 2,\n        \"nombre\": \"Example\",\n        \"email\": \"example@example\",\n        \"admin\": false,\n        \"direccion\": \"Av. Siempre Viva 1902\",\n        \"telefono\": \"01132490074\",\n        \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\"\n    },\n    \"token\": \"<TOKEN>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "example1@example.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "passwordConfirm",
+									"value": "password",
+									"type": "default"
+								},
+								{
+									"key": "direccion",
+									"value": "Direccion",
+									"type": "default"
+								},
+								{
+									"key": "telefono",
+									"value": "1234",
+									"type": "default"
+								},
+								{
+									"key": "avatar",
+									"value": "https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png",
+									"type": "default"
+								},
+								{
+									"key": "admin",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "nombre",
+									"value": "example",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/profile/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"profile",
+								"5"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/user/profile?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "example1@example.com",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "default"
+										},
+										{
+											"key": "passwordConfirm",
+											"value": "password",
+											"type": "default"
+										},
+										{
+											"key": "direccion",
+											"value": "Direccion",
+											"type": "default"
+										},
+										{
+											"key": "telefono",
+											"value": "1234",
+											"type": "default"
+										},
+										{
+											"key": "avatar",
+											"value": "https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png",
+											"type": "default"
+										},
+										{
+											"key": "admin",
+											"value": "true",
+											"type": "default"
+										},
+										{
+											"key": "nombre",
+											"value": "example",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:8080/user/profile/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"profile",
+										"5"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14c-uF31u6NKlg9Dzrwu6oYh2h7q/5k\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:06:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6246081c11790533eecf28a8\",\n    \"email\": \"example1@example.com\",\n    \"password\": \"$2b$10$6aSnuphbWKuTzhnWGVysGufh9y59jD2jyKqFljp1GcJhBmQuE20nO\",\n    \"nombre\": \"example\",\n    \"telefono\": \"1234\",\n    \"direccion\": \"Direccion\",\n    \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\",\n    \"admin\": true,\n    \"id\": 5,\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Mensajes",
+			"item": [
+				{
+					"name": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chat"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"chat"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1993"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c9-CLj1a0zJasx9THkHkijKhdGGsRQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:20:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6243447da988139a5320b59f\",\n        \"email\": \"example@example\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"Hola a todos\",\n        \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\",\n        \"timestamp\": \"29/3/2022 14:40:13\",\n        \"id\": 1,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"62435aea519c3587df8d534f\",\n        \"email\": \"admin@admin\",\n        \"tipo\": \"sistema\",\n        \"cuerpo\": \"hola, en que puedo ayudarte\",\n        \"avatar\": \"https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png\",\n        \"timestamp\": \"29/3/2022 16:15:54\",\n        \"id\": 2,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"624388f9fcd77b6221503fba\",\n        \"email\": \"admin@admin\",\n        \"tipo\": \"sistema\",\n        \"cuerpo\": \"Informe su email para continuar\",\n        \"avatar\": \"https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png\",\n        \"timestamp\": \"29/3/2022 19:32:25\",\n        \"id\": 3,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"624447a95605a5071a252709\",\n        \"email\": \"example@example\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"hola si, mi mail es example@example\",\n        \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\",\n        \"timestamp\": \"30/3/2022 09:06:01\",\n        \"id\": 4,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6244a1b127996b93d2f0afd4\",\n        \"email\": \"damian@damian\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"Hola \",\n        \"avatar\": \"https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png\",\n        \"timestamp\": \"30/3/2022 15:30:09\",\n        \"id\": 5,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6244a1fa27996b93d2f0b000\",\n        \"email\": \"admin@admin\",\n        \"tipo\": \"sistema\",\n        \"cuerpo\": \"hola\",\n        \"avatar\": \"https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png\",\n        \"timestamp\": \"30/3/2022 15:31:22\",\n        \"id\": 6,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6244a20827996b93d2f0b006\",\n        \"email\": \"damian@damian\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"Todo bien?\",\n        \"avatar\": \"https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png\",\n        \"timestamp\": \"30/3/2022 15:31:36\",\n        \"id\": 7,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6244a22027996b93d2f0b00b\",\n        \"email\": \"damian@damian\",\n        \"tipo\": \"sistema\",\n        \"cuerpo\": \"hola\",\n        \"avatar\": \"https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png\",\n        \"timestamp\": \"30/3/2022 15:32:00\",\n        \"id\": 8,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/chat/<EMAIL>?secret_token=<TOKEN>",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/chat/<EMAIL>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chat",
+								"example@example"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/chat/<EMAIL>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/chat/<EMAIL>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"chat",
+										"example@example"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "532"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"214-M7OAJLqVoNPFuPrMtMdmAWGp/8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:20:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6243447da988139a5320b59f\",\n        \"email\": \"example@example\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"Hola a todos\",\n        \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\",\n        \"timestamp\": \"29/3/2022 14:40:13\",\n        \"id\": 1,\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"624447a95605a5071a252709\",\n        \"email\": \"example@example\",\n        \"tipo\": \"usuario\",\n        \"cuerpo\": \"hola si, mi mail es example@example\",\n        \"avatar\": \"https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png\",\n        \"timestamp\": \"30/3/2022 09:06:01\",\n        \"id\": 4,\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "avatar",
+									"value": "http:....",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "example@example",
+									"type": "default"
+								},
+								{
+									"key": "tipo",
+									"value": "usuario",
+									"type": "default"
+								},
+								{
+									"key": "cuerpo",
+									"value": "Hola",
+									"type": "default"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chat"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "avatar",
+											"value": "http:....",
+											"type": "default"
+										},
+										{
+											"key": "email",
+											"value": "example@example",
+											"type": "default"
+										},
+										{
+											"key": "tipo",
+											"value": "usuario",
+											"type": "default"
+										},
+										{
+											"key": "cuerpo",
+											"value": "Hola",
+											"type": "default"
+										}
+									],
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/chat?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"chat"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-JC/kYUY8dAAofW1Va/IywUagWMI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 20:22:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Nuevo mensaje ID: 9 cargado OK!\""
+						}
+					]
+				},
+				{
+					"name": "http://localhost:8080/api/chat/<ID>?secret_token=<TOKEN>",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/chat/<ID>?secret_token=<TOKEN>",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"chat",
+								"4"
+							],
+							"query": [
+								{
+									"key": "secret_token",
+									"value": "<TOKEN>"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:8080/api/chat/<ID>?secret_token=<TOKEN>",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/chat/<ID>?secret_token=<TOKEN>",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"chat",
+										"4"
+									],
+									"query": [
+										{
+											"key": "secret_token",
+											"value": "<TOKEN>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-45zxe233yZ9Q565ntehTxqkFO/0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 31 Mar 2022 22:29:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Mensaje ID: 4 eliminado OK!\""
+						}
+					]
+				}
+			]
+		}
+	]
+}

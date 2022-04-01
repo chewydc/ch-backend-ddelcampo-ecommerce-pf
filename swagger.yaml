@@ -1,0 +1,776 @@
+openapi: 3.0.0
+servers:
+  - url: 'http://localhost:8080/'
+    description: An description
+info:
+  description: APIs Documentation Swagger - Entrega Final ddelcampo
+  version: 1.0.1
+  title: Entrega Final ddelcampo - Curso Backend CoderHouse
+  contact:
+    email: ddelcampo@teco.com.ar
+tags:
+  - name: Default
+    description: tag default
+paths:
+  /api/ordenes/1:
+    get:
+      summary: 'http://localhost:8080/api/ordenes/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/ordenes?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 62446bde3aa6c48829d1c7b5
+                    items:
+                      - nombre: Mochila
+                        precio: 1235
+                        descripcion: mochi
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png
+                        cantidad: 1
+                        timestamp: '29/3/2022 19:31:55'
+                        id: 1
+                      - nombre: Calculadora
+                        precio: 123
+                        descripcion: Calculadora Cientifica
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png
+                        cantidad: 1
+                        timestamp: '30/3/2022 08:59:53'
+                        id: 2
+                    email: example@example
+                    direccion: Av. Siempre Viva 1900
+                    estado: generada
+                    timestamp: '30/3/2022 11:40:30'
+                    id: 1
+                    __v: 0
+    post:
+      summary: 'http://localhost:8080/api/ordenes/1?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/ordenes?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: Orden 13 creada con exito.
+  /api/ordenes/example@example:
+    get:
+      summary: 'http://localhost:8080/api/ordenes/example@example?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/ordenes?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 62446bde3aa6c48829d1c7b5
+                    items:
+                      - nombre: Mochila
+                        precio: 1235
+                        descripcion: mochi
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png
+                        cantidad: 1
+                        timestamp: '29/3/2022 19:31:55'
+                        id: 1
+                      - nombre: Calculadora
+                        precio: 123
+                        descripcion: Calculadora Cientifica
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png
+                        cantidad: 1
+                        timestamp: '30/3/2022 08:59:53'
+                        id: 2
+                    email: example@example
+                    direccion: Av. Siempre Viva 1900
+                    estado: generada
+                    timestamp: '30/3/2022 11:40:30'
+                    id: 1
+                    __v: 0
+  /api/productos:
+    get:
+      summary: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 624388d2fcd77b6221503fac
+                    nombre: Mochila
+                    precio: 1235
+                    descripcion: mochi
+                    categoria: mochi
+                    stock: 1224
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png
+                    timestamp: '29/3/2022 19:31:55'
+                    id: 1
+                    __v: 0
+                  - _id: 624446394c4152bd8dbcea43
+                    nombre: Calculadora
+                    precio: 123
+                    descripcion: Calculadora Cientifica
+                    categoria: Calculadoras
+                    stock: 1119
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-256.png
+                    timestamp: '30/3/2022 08:59:53'
+                    id: 2
+                    __v: 0
+                  - _id: 6244a27927996b93d2f0b015
+                    nombre: Paleta
+                    precio: 12900
+                    descripcion: Paleta de colores
+                    categoria: Paleta
+                    stock: 1
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/paint-color-pallete-brush-academy-128.png
+                    timestamp: '30/3/2022 15:33:39'
+                    id: 3
+                    __v: 0
+    post:
+      summary: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: Pizarra
+                precio: 2500
+                descripcion: Pizarra 4x4
+                categoria: Pizarras
+                stock: 185
+                foto: https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 'Nuevo producto ID: 4 cargado OK!'
+  /api/productos/1:
+    get:
+      summary: 'http://localhost:8080/api/productos/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 624388d2fcd77b6221503fac
+                    nombre: Mochila
+                    precio: 1235
+                    descripcion: mochi
+                    categoria: mochi
+                    stock: 1224
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/bag-pack-container-school-128.png
+                    timestamp: '29/3/2022 19:31:55'
+                    id: 1
+                    __v: 0
+  /api/productos/1:
+    put:
+      summary: 'http://localhost:8080/api/productos/1?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nombre: Pizarra
+                precio: 2500
+                descripcion: Pizarra 4x4
+                categoria: Pizarras
+                stock: 180
+                foto: https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  _id: 62460bb9259cdd30082db723
+                  nombre: Pizarra
+                  precio: 2500
+                  descripcion: Pizarra 4x4
+                  categoria: Pizarras
+                  stock: 180
+                  foto: https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png
+                  timestamp: '31/3/2022 17:16:11'
+                  id: 4
+                  __v: 0
+    delete:
+      summary: 'http://localhost:8080/api/productos/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 'Producto ID: 4 eliminado OK!'
+  /api/carrito/1:
+    get:
+      summary: 'http://localhost:8080/api/carrito/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  _id: 622a0f3623a1cb2582d19d94
+                  productos:
+                    - nombre: Calculadora 2
+                      precio: 2500
+                      descripcion: Calculadora Cientifica 2
+                      foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                      cantidad: 2
+                      timestamp: '10/3/2022 11:46:00'
+                      id: 2
+                    - nombre: Calculadora
+                      precio: 2500
+                      descripcion: Calculadora Cientifica
+                      foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                      cantidad: 3
+                      timestamp: '10/3/2022 11:45:47'
+                      id: 1
+                  email: damian@gmail
+                  direccion: scalabrini 129
+                  timestamp: '10/3/2022 11:46:13'
+                  id: 1
+                  __v: 0
+  /api/carrito/<ID>/productos:
+    get:
+      summary: 'http://localhost:8080/api/carrito/1/productos?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/carrito/<ID>/productos?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - nombre: Calculadora 2
+                    precio: 2500
+                    descripcion: Calculadora Cientifica 2
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                    cantidad: 2
+                    timestamp: '10/3/2022 11:46:00'
+                    id: 2
+                  - nombre: Calculadora
+                    precio: 2500
+                    descripcion: Calculadora Cientifica
+                    foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                    cantidad: 3
+                    timestamp: '10/3/2022 11:45:47'
+                    id: 1
+  /api/carrito:
+    post:
+      summary: 'http://localhost:8080/api/carrito?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                email: example@example.com
+                direccion: Av. Siempre Viva 123
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/carrito?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 76
+  /api/carrito/1:
+    delete:
+      summary: 'http://localhost:8080/api/carrito/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/carrito/<ID>?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 'Carrito ID: 4 eliminado OK!'
+  /api/carrito/<ID>/productos/1:
+    post:
+      summary: http://localhost:8080/api/carrito/1/productos/1?secret_token=<TOKEN>
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example: {}
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 622a0f3623a1cb2582d19d94
+                    productos:
+                      - nombre: Calculadora 2
+                        precio: 2500
+                        descripcion: Calculadora Cientifica 2
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                        cantidad: 2
+                        timestamp: '10/3/2022 11:46:00'
+                        id: 2
+                      - nombre: Calculadora
+                        precio: 2500
+                        descripcion: Calculadora Cientifica
+                        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/calculator-math-tool-school-128.png
+                        cantidad: 4
+                        timestamp: '10/3/2022 11:45:47'
+                        id: 1
+                    email: damian@gmail
+                    direccion: scalabrini 129
+                    timestamp: '10/3/2022 11:46:13'
+                    id: 1
+                    __v: 0
+    delete:
+      summary: http://localhost:8080/api/carrito/1/productos/1?secret_token=<TOKEN>
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: http://localhost:8080/api/carrito/<ID>/productos/<ID>?secret_token=<TOKEN>
+          content:
+            application/json:
+              schema:
+                example: null
+  /api/usuario/register:
+    post:
+      summary: 'http://localhost:8080/api/usuario/register'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: example1@example.com
+                password:
+                  type: string
+                  example: password
+                passwordConfirm:
+                  type: string
+                  example: password
+                nombre:
+                  type: string
+                  example: Nombre Apellido
+                telefono:
+                  type: string
+                  example: '1123456789'
+                direccion:
+                  type: string
+                  example: Av Siempre Viva
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/signup'
+          content:
+            application/json:
+              schema:
+                example:
+                  message: El usuario se registro con exito
+                  userID:
+                    userId: 1
+  /api/usuario/login:
+    post:
+      summary: 'http://localhost:8080/api/usuario/login'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: example@example
+                password:
+                  type: string
+                  example: password
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/login'
+          content:
+            application/json:
+              schema:
+                example:
+                  token: <TOKEN>
+  /user/profile:
+    get:
+      summary: 'http://localhost:8080/user/profile?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/user/profile?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  user:
+                    id: 2
+                    nombre: Example
+                    email: example@example
+                    admin: false
+                    direccion: Av. Siempre Viva 1902
+                    telefono: 01132490074
+                    avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                  token: <TOKEN>
+  /user/profile/1:
+    put:
+      summary: 'http://localhost:8080/user/profile?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: example1@example.com
+                password:
+                  type: string
+                  example: password
+                passwordConfirm:
+                  type: string
+                  example: password
+                direccion:
+                  type: string
+                  example: Direccion
+                telefono:
+                  type: string
+                  example: '1234'
+                avatar:
+                  type: string
+                  example: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                admin:
+                  type: string
+                  example: 'true'
+                nombre:
+                  type: string
+                  example: example
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/user/profile?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  _id: 6246081c11790533eecf28a8
+                  email: example1@example.com
+                  password: $2b$10$6aSnuphbWKuTzhnWGVysGufh9y59jD2jyKqFljp1GcJhBmQuE20nO
+                  nombre: example
+                  telefono: '1234'
+                  direccion: Direccion
+                  avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                  admin: true
+                  id: 5
+                  __v: 0
+  /api/chat:
+    get:
+      summary: 'http://localhost:8080/api/chat?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/chat?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 6243447da988139a5320b59f
+                    email: example@example
+                    tipo: usuario
+                    cuerpo: Hola a todos
+                    avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                    timestamp: '29/3/2022 14:40:13'
+                    id: 1
+                    __v: 0
+                  - _id: 62435aea519c3587df8d534f
+                    email: admin@admin
+                    tipo: sistema
+                    cuerpo: 'hola, en que puedo ayudarte'
+                    avatar: https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png
+                    timestamp: '29/3/2022 16:15:54'
+                    id: 2
+                    __v: 0
+                  - _id: 624388f9fcd77b6221503fba
+                    email: admin@admin
+                    tipo: sistema
+                    cuerpo: Informe su email para continuar
+                    avatar: https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png
+                    timestamp: '29/3/2022 19:32:25'
+                    id: 3
+                    __v: 0
+                  - _id: 624447a95605a5071a252709
+                    email: example@example
+                    tipo: usuario
+                    cuerpo: 'hola si, mi mail es example@example'
+                    avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                    timestamp: '30/3/2022 09:06:01'
+                    id: 4
+                    __v: 0
+                  - _id: 6244a1b127996b93d2f0afd4
+                    email: damian@damian
+                    tipo: usuario
+                    cuerpo: 'Hola '
+                    avatar: https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png
+                    timestamp: '30/3/2022 15:30:09'
+                    id: 5
+                    __v: 0
+                  - _id: 6244a1fa27996b93d2f0b000
+                    email: admin@admin
+                    tipo: sistema
+                    cuerpo: hola
+                    avatar: https://cdn4.iconfinder.com/data/icons/web-icons-22/48/store-128.png
+                    timestamp: '30/3/2022 15:31:22'
+                    id: 6
+                    __v: 0
+                  - _id: 6244a20827996b93d2f0b006
+                    email: damian@damian
+                    tipo: usuario
+                    cuerpo: Todo bien?
+                    avatar: https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png
+                    timestamp: '30/3/2022 15:31:36'
+                    id: 7
+                    __v: 0
+                  - _id: 6244a22027996b93d2f0b00b
+                    email: damian@damian
+                    tipo: sistema
+                    cuerpo: hola
+                    avatar: https://cdn2.iconfinder.com/data/icons/avatars-vol-1-glyph/64/glyph-avatar-white-man-beard-128.png
+                    timestamp: '30/3/2022 15:32:00'
+                    id: 8
+                    __v: 0
+    post:
+      summary: 'http://localhost:8080/api/chat?secret_token=<TOKEN>'
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                avatar:
+                  type: string
+                  example: 'http:....'
+                email:
+                  type: string
+                  example: example@example
+                tipo:
+                  type: string
+                  example: usuario
+                cuerpo:
+                  type: string
+                  example: Hola
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/chat?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 'Nuevo mensaje ID: 9 cargado OK!'
+  /api/chat/example@example:
+    get:
+      summary: 'http://localhost:8080/api/chat/example@example?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/chat/<EMAIL>?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example:
+                  - _id: 6243447da988139a5320b59f
+                    email: example@example
+                    tipo: usuario
+                    cuerpo: Hola a todos
+                    avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                    timestamp: '29/3/2022 14:40:13'
+                    id: 1
+                    __v: 0
+                  - _id: 624447a95605a5071a252709
+                    email: example@example
+                    tipo: usuario
+                    cuerpo: 'hola si, mi mail es example@example'
+                    avatar: https://cdn0.iconfinder.com/data/icons/ecommerce-essential-material-1/32/Artboard_16-128.png
+                    timestamp: '30/3/2022 09:06:01'
+                    id: 4
+                    __v: 0
+  /api/chat/1:
+    delete:
+      summary: 'http://localhost:8080/api/chat/1?secret_token=<TOKEN>'
+      parameters:
+        - in: query
+          name: secret_token
+          schema:
+            type: string
+            example: <TOKEN>
+      tags:
+        - Default
+      responses:
+        '200':
+          description: 'http://localhost:8080/api/chat/<ID>?secret_token=<TOKEN>'
+          content:
+            application/json:
+              schema:
+                example: 'Mensaje ID: 4 eliminado OK!'
+components:
+  securitySchemes: {}

@@ -1,0 +1,47 @@
+{{#if orden}}
+<div class="table-responsive">
+    <table id="tabla1" class="table table-bordered table-dark ">
+        <tr style="color: yellow;">
+            <th>Id</th>
+            <th>Estado</th>
+            <th>Productos</th>
+        </tr>
+        <tr>
+            {{#each orden}}
+            <td>{{this.id}}</td>
+            <td>{{this.estado}}</td>
+            <td id="nested">
+                <table id="tabla2" class="table table-bordered table-dark">
+                    <tr style="color: yellow;">
+                        <th>Nombre</th>
+                        <th>
+                            <center>Precio</center>
+                        </th>
+                        <th>
+                            <center>Cantidad</center>
+                        </th>
+                    </tr>
+                    {{#each this.items}}
+                    <tr>
+                        <td>{{this.nombre}}</td>
+                        <td>
+                            <center>{{this.precio}}</center>
+                        </td>
+                        <td>
+                            <center>{{this.cantidad}}</center>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </td>
+
+            {{/each}}
+        </tr>
+    </table>
+</div>
+<center>
+    <button type="button" id="btnVolverOrdenes" class="btn btn-secondary" onclick="cargaOrdenes()">Volver</button>
+</center>
+{{else}}
+<h3 class="alert alert-danger">No se encontro datos de la orden</h3>
+{{/if}}

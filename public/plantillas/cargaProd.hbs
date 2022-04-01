@@ -1,0 +1,47 @@
+{{#if admin}}
+<h1>Nuevo Producto</h1>
+<br>
+    <form>
+    <div class="form-group">
+        <label for="nombre"><b>Nombre</b></label>
+        <input id="nombre" class="form-control" type="text" name="nombre">
+    </div>
+
+    <div class="form-group">
+        <label for="Precio"><b>Precio</b></label>
+        <input id="Precio" class="form-control" type="text" name="precio">
+    </div>
+
+    <div class="form-group">
+        <label for="descripcion"><b>Descripcion</b></label>
+        <input id="descripcion" class="form-control" type="text" name="descripcion">
+    </div>
+
+    <div class="form-group">
+        <label for="categoria"><b>Categoria</b></label>
+        <input id="categoria" class="form-control" type="text" name="categoria">
+    </div>
+
+    <div class="form-group">
+        <label for="stock"><b>Stock</b></label>
+        <input id="stock" class="form-control" type="text" name="stock">
+    </div>
+    
+    <div class="form-group">
+        <label for="foto"><b>Foto URL</b></label>
+        <input id="foto" class="form-control" type="text" name="foto">
+    </div>
+    <button class="btn btn-success mt-3 mb-5"type="button" onclick="cargaProd()"id="btnLogout">Cargar</button>
+</form>
+{{else}}
+<div class="alert alert-danger">
+    <center>
+        <img src="https://cdn3.iconfinder.com/data/icons/constructions-tools/48/stop_hand-128.png" alt="">
+    </center>
+    <h3 >
+        <center>Solo un Administrador puede acceder!</center>
+    </h3>
+</div>
+{{/if}}
+
+

@@ -1,0 +1,40 @@
+{{#each mensajes}}
+{{#if this.usuario}}
+<div class="d-flex align-items-baseline mb-4">
+    <div class="position-relative avatar">
+        <img src="{{this.avatar}}" class="img-fluid rounded-circle" alt="" >
+        <span
+            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+        </span>
+    </div>
+    <div class="pe-2">
+        <div>
+            <div class="card card-text d-inline-block p-2 px-3 m-1">{{this.cuerpo}}</div>
+        </div>
+        <div>
+            <div class="small">{{this.timestamp}}</div>
+        </div>
+    </div>
+</div>
+{{else}}
+<div class="d-flex align-items-baseline text-end justify-content-end mb-4">
+    <div class="pe-2">
+        <div>
+            <div class="card card-text d-inline-block p-2 px-3 m-1">{{this.cuerpo}}</div>
+        </div>
+        <div>
+            <div class="small">{{this.timestamp}}</div>
+        </div>
+    </div>
+    <div class="position-relative avatar">
+        <img src="{{this.avatar}}" 
+            class="img-fluid rounded-circle" alt="" >
+        <span
+            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+        </span>
+    </div>
+</div>
+{{/if}}
+{{/each}}

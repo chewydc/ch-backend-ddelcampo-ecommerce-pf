@@ -1,0 +1,22 @@
+{{#if ordenes}}
+<div class="table-responsive">
+    <table class="table table-dark table-striped">
+        <tr style="color: yellow;">
+            <th>Id</th>
+            <th>Estado</th>
+            <th>Direccion</th>
+            <th>Fecha</th>
+        </tr>
+        {{#each ordenes}}
+        <tr>
+            <td><a class="font-italic" onclick='getInfoOrder({{this.id}})'>{{this.id}}</a></td>
+            <td>{{this.estado}}</td>
+            <td>{{this.direccion}}</td>
+            <td>{{this.timestamp}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+{{else}}
+<h3 class="alert alert-danger">No se encontraron ordenes</h3>
+{{/if}}
