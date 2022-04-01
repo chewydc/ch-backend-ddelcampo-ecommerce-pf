@@ -1,6 +1,7 @@
 //-------------------------------------------------------------------
 // PROYECTO FINAL
-// Fecha Tope Entrega: 04-04-22// Alumno: Damian del Campo
+// Fecha Tope Entrega: 04-04-22
+// Alumno: Damian del Campo
 //-------------------------------------------------------------------
 import path from 'path'
 import dotenv from 'dotenv'
@@ -13,7 +14,7 @@ if (process.env.NODE_ENV === "produccion" || process.env.NODE_ENV === "prod") {
             path: process.env.PROD_PATH_LOCAL_FS || 'DB'
         },
         mongodb: {
-            url: process.env.PROD_MONGO_URL || 'mongodb+srv://admin:admin@cluster0.e47it.mongodb.net/ecommerce_dev',
+            url: process.env.PROD_MONGO_URL || 'mongodb+srv://USER:PASS@HOST.mongodb.net/DB_DEV',
             options: {
                 serverSelectionTimeoutMS: process.env.PROD_MONGO_TO || 5000
             }
@@ -21,7 +22,7 @@ if (process.env.NODE_ENV === "produccion" || process.env.NODE_ENV === "prod") {
         server: {
             port: process.env.PROD_SERVER_PORT || 8080,
             modo: process.env.PROD_SERVER_MODO || 'FORK',
-            sessionkey: process.env.PROD_SESSION_SECRET_KEY || 'keysecret',
+            sessionkey: process.env.PROD_SESSION_SECRET_KEY || 'KEY',
             sessiontime: process.env.PROD_EXPIRACION || '60000s',
             persistenciaCart: process.env.PROD_CARRITOS_PERSIST || 'mongodb',
             persistenciaProd: process.env.PROD_PRODUCTOS_PERSIST || 'mongodb',
@@ -60,15 +61,15 @@ else {
             path: process.env.DEV_PATH_LOCAL_FS || 'DB'
         },
         mongodb: {
-            url: process.env.DEV_MONGO_URL || 'mongodb+srv://admin:admin@cluster0.e47it.mongodb.net/ecommerce',
+            url: process.env.DEV_MONGO_URL || 'mongodb+srv://USER:PASS@HOST.mongodb.net/DB_PROD',
             options: {
                 serverSelectionTimeoutMS: process.env.DEV_MONGO_TO || 5000
             }
         },
         server: {
-            port: process.env.DEV_SERVER_PORT || 8081,
+            port: process.env.DEV_SERVER_PORT || 8080,
             modo: process.env.DEV_SERVER_MODO || 'FORK',
-            sessionkey: process.env.DEV_SESSION_SECRET_KEY || 'keysecret',
+            sessionkey: process.env.DEV_SESSION_SECRET_KEY || 'KEY',
             sessiontime: process.env.DEV_EXPIRACION || '60000s',
             persistenciaCart: process.env.DEV_CARRITOS_PERSIST || 'mongodb',
             persistenciaProd: process.env.DEV_PRODUCTOS_PERSIST || 'mongodb',
